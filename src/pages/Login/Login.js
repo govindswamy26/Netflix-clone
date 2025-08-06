@@ -67,12 +67,28 @@ function Login(props) {
           {signState === "Sign In" ? (
             <p>
               New to Netflix?{" "}
-              <span onClick={() => setSignState("Sign Up")}>Sign Up Now</span>
+              <span
+                onClick={function () {
+                  setSignState("Sign Up");
+                  setEmail("");
+                  setPassword("");
+                }}
+              >
+                Sign Up Now
+              </span>
             </p>
           ) : (
             <p>
               Already have account?{" "}
-              <span onClick={() => setSignState("Sign In")}>Sign in Now</span>
+              <span
+                onClick={function () {
+                  setSignState("Sign In");
+                  setEmail("");
+                  setPassword("");
+                }}
+              >
+                Sign in Now
+              </span>
             </p>
           )}
         </div>
